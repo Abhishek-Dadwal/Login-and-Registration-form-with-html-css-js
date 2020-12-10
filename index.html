@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+<body>
+	<form action="user.html">
+  <div class="cont">
+    <div class="form login">
+      <h2>Welcome</h2>
+      <label>
+        <span>Email Address</span>
+        <input id="username"type="email" name="email" required>
+      </label>
+      <label>
+        <span>Password</span>
+        <input id="password" type="password" name="password" required>
+      </label>
+      <input class="button" onclick="getInfo()" type="submit" value="Login"></input>
+
+    </div>
+	</form>
+
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img-text m-up">
+          <h2>New here?</h2>
+          <p>Register and discover great amount of new opportunities!</p>
+        </div>
+        <div class="img-text m-in">
+          <h2>One of us?</h2>
+          <p>If you already has an account, just Login. We've missed you!</p>
+        </div>
+        <div class="img-btn">
+          <span class="m-up">Register</span>
+          <span class="m-in">Login</span>
+        </div>
+      </div>
+
+			<form>
+      <div class="form register">
+        <h2>Let's Join Hands together!</h2>
+        <label>
+          <span>Name</span>
+          <input type="text" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" required>
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" id="pswd1" required>
+        </label>
+        <label>
+          <span>Confirm Password</span>
+          <input type="password" id="pswd2" required>
+        </label>
+        <input class="button" onclick="matchPassword()" type="submit" value="Register Now"></input>
+        <input class="button" type="reset" value="Reset">
+			</div>
+		</form>
+
+    </div>
+  </div>
+<script type="text/javascript" src="index.js">
+
+</script>
+</body>
+</html>

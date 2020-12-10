@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Welcome to User Profile
+    </title>
+    <link rel="stylesheet" href="user.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="cont">
+    <p class="loggedin">*You Have Logged in*</p>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div class="form-login">
+                      <h2>User Profile</h2>
+                        <label><span> Name</span></label><label class="validation-error hide" id="fullNameValidationError"></label>
+                        <input type="text" name="fullName" id="fullName" required>
+
+                        <label><span>Age</span></label>
+                        <input type="number" name="age" id="age" required>
+
+
+                        <label><span>Gender</span></label>
+                        <input type="text" name="gender" id="gender" placeholder="M/F" required>
+
+                        <label><span>Phone</span></label>
+                        <input type="text" name="phone" id="phone" pattern="[0-9]{10}" required>
+
+                      <!-- <label>Address</label>
+                      <input type="text" name="address" id="address" required> -->
+
+                      <input class="button" type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+              <h2>View</h2>
+                <table border="1" class="list" id="employeeList">
+                  <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                  <label for="file" style="cursor: pointer;">Upload Image</label>
+                  <img id="output" width="200" />
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Phone</th>
+                            <th>Button</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+  </div>
+    <script src="user.js"></script>
+</body>
+
+</html>
